@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tutorial</title>
+    <style>
+        #test, #test-2{
+            border: 2px solid black;
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form onsubmit="submitForm()">
+        <input id="email" placeholder="Email">
+        <input id="first-name" placeholder="Firstname">
+        <button>Submit</button>
+    </form>
+    <div id="test" onclick="changeTest()"></div>
+    <div id="test-2"></div>
+    <script src="./app.js"></script>
+</body>
+</html>
