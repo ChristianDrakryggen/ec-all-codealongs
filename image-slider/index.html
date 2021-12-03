@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="image-grid"></div>
+    <div id="lightbox-wrapper">
+        <div class="close-wrapper">
+            <span onclick="closeLightBox()">X</span>
+        </div>
+        <div id="main-image-wrapper">
+            <img id="main-image" alt="main image" src="">
+            <button id="prev-btn" onclick="prevImg()"><</button>
+            <button id="next-btn" onclick="nextImg()">></button>
+        </div>
+        <div id="thumbnails-wrapper"></div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
