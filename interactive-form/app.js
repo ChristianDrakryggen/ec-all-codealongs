@@ -8,6 +8,9 @@ const sendMessage = () => {
     if (!emailRegex.test(email)) {
       throw "Incorrect email";
     }
+    if (noHtmlRegex.test(email)) {
+      throw "Incorrect email syntax";
+    }
     if (noHtmlRegex.test(firstname)) {
       throw "Incorrect firstname";
     }
@@ -23,6 +26,14 @@ const sendMessage = () => {
           document.querySelector("#email-error").innerHTML = "";
         }, 2000);
         break;
+      case "Incorrect email syntax":
+        document.querySelector(
+          "#email-error"
+        ).innerHTML = `${error}, please avoid: <, /, or >`;
+        setTimeout(() => {
+          document.querySelector("#email-error").innerHTML = "";
+        }, 2000);
+        break;
       case "Incorrect firstname":
         document.querySelector(
           "#firstname-error"
@@ -34,7 +45,7 @@ const sendMessage = () => {
       case "Incorrect message":
         document.querySelector(
           "#message-error"
-        ).innerHTML = `${error}, , please avoid: <, /, or >`;
+        ).innerHTML = `${error}, please avoid: <, /, or >`;
         setTimeout(() => {
           document.querySelector("#message-error").innerHTML = "";
         }, 2000);
