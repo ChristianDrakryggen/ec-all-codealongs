@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="page-content">
+        <form onsubmit="sendMessage(); return false;" id="message-form">
+            <h2>Send us a message!</h2>
+            <input id="email" placeholder="Email" required>
+            <p id="email-error"></p>
+            <input id="firstname" placeholder="Firstname" required>
+            <p id="firstname-error"></p>
+            <textarea id="message" placeholder="Write your message here!" minlength="15" required></textarea>
+            <p id="message-error"></p>
+            <button type="submit">Swooooosh!</button>
+        </form>
+    </div>
+    <div id="modal">
+        <span class="loader"></span>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
